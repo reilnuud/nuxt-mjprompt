@@ -17,7 +17,7 @@
         <textarea
           :value="phrase.phrase"
           @input="e => (phrases[i].phrase = e.target.value)"
-          class="h-4 bg-stone-600 border-stone-300 rounded border-2 text-xs px-2 py-1 min-h-[1.67rem] overflow-auto w-full"
+          class="h-4 bg-stone-600 border-stone-300 rounded border-2 text-xs px-2 py-1 min-h-[1.67rem] overflow-auto w-full grow"
         />
         <span class="flex-shrink-0 w-auto">::</span>
         <input
@@ -163,6 +163,20 @@
 
 <script>
 export default {
+  setup() {
+    // eslint-disable-next-line no-undef
+    useHead({
+      title: "Midjourney Prompt Builder",
+      viewport: "width=device-width, initial-scale=1, maximum-scale=1",
+      charset: "utf-8",
+      meta: [
+        {
+          name: "description",
+          content: "Unofficial prompt builder for Midjourney.",
+        },
+      ],
+    });
+  },
   data: () => ({
     phrases: [],
     ar: "",
