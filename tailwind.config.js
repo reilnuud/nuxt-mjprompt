@@ -9,7 +9,8 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      sans: ["Urbanist", "sans-serif"],
+      sans: ["Source Sans Pro", "sans-serif"],
+      mono: ["Source Code Pro", "monospace"],
     },
   },
   plugins: [typography],
